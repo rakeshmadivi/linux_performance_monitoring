@@ -53,3 +53,16 @@ function nice_value_testing()
   # SCHED_DEADLINE min/max priority : 0/0
   
 }
+
+# SMARTCTL TOOL
+function install_smartctl()
+{
+  sudo apt-get install smartmontools
+}
+
+function smartctl_stats()
+{
+  sudo smartctl --scan
+  sudo smartctl -i /dev/sda2  # info
+  sudo smartctl -a /dev/sda2  # All info
+}
